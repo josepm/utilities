@@ -11,6 +11,7 @@ import platform
 from capacity_planning.data import do_hql as hql
 from capacity_planning.utilities.temp_utils import TempUtils
 
+
 class TaskTracker:
     def __init__(self, argv):
         if len(argv) > 2:
