@@ -15,8 +15,8 @@ from isoweek import Week
 import numpy as np
 import pandas as pd
 import calendar
-from capacity_planning.utilities import sys_utils as su
-from capacity_planning.utilities import pandas_utils as p_ut
+from Utilities import sys_utils as su
+from Utilities import pandas_utils as p_ut
 
 # see https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior for date string format options
 # The isoweek module provide the class Week. Instances represent specific weeks spanning Monday to Sunday.

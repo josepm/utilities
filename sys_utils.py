@@ -21,7 +21,7 @@ import multiprocessing as mp
 if 'AIRFLOW_TMP_DIR' in os.environ.keys():
     pass
 
-from capacity_planning.utilities import pandas_utils as p_ut
+from Utilities import pandas_utils as p_ut
 
 S3_BUCKET = 'airbnb-emr'
 S3_CONTAINER = 'capacity_planning'

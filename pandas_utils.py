@@ -10,8 +10,8 @@ from itertools import product
 from fbprophet import Prophet
 from functools import reduce
 
-from capacity_planning.utilities import sys_utils as su
-from capacity_planning.utilities import time_utils as tu
+from Utilities import sys_utils as su
+from Utilities import time_utils as tu
 # from capacity_planning.utilities import TempUtils
 
 
