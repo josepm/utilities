@@ -72,8 +72,8 @@ class TimeSeries(object):
         """
         season_ = self.seasonal_data()
         event_ = self.event_data()
-        trend_, self.trend_tbreak_, self.trend_thetat_ = self._gen_ts('trend', self.trend_cpt, self.trend_noise_level, self.trend_slow_bleed)
-        level_, self.level_tbreak_, self.level_thetat_ = self._gen_ts('level', self.level_cpt, self.level_noise_level, self.level_slow_bleed)
+        trend_, self.trend_tbreak_, self.trend_thetat_, self.trend_theta_ = self._gen_ts('trend', self.trend_cpt, self.trend_noise_level, self.trend_slow_bleed)
+        level_, self.level_tbreak_, self.level_thetat_, self.level_theta_ = self._gen_ts('level', self.level_cpt, self.level_noise_level, self.level_slow_bleed)
         if self.t_size > 0:     # mixture
             lambdas = np.random.uniform(low=-2.0, high=2.0, size=self.t_size)
             print('TS mixture:: lambdas: ' + str(lambdas))
@@ -121,7 +121,7 @@ class TimeSeries(object):
             else:  # level
                 y_ = np.random.poisson(thetat_).astype(float)
                 y_ -= np.mean(y_)
-            return y_, tbreak_, thetat_
+            return y_, tbreak_, thetat_, theta
 
     def bounded_ts(self, floor=0.0, ceil=1.0):
         # TS bounded between floor and ceil
